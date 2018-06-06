@@ -23,17 +23,18 @@ use Mix.Config
 
 config :spmapi, SpmapiWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "spmapi.com", port: 443],
-  cache_static_manifest: "priv/static/cache_manifest.json",
-  https: [
-    port: 443,
-    keyfile: Path.expand("/etc/letsencrypt/live/spmapi.com/privkey.pem", __DIR__),
-    certfile: Path.expand("/etc/letsencrypt/live/spmapi.com/fullchain.pem", __DIR__)
-  ],
-  server: true,
-  root: ".",
-  version: Application.spec(:spmapi, :vsn),
-  force_ssl: [hsts: true]
+  url: [host: "localhost", port: 34567],
+  cache_static_manifest: "priv/static/cache_manifest.json"
+
+# https: [
+#   port: 443,
+#   keyfile: Path.expand("/etc/letsencrypt/live/spmapi.com/privkey.pem", __DIR__),
+#   certfile: Path.expand("/etc/letsencrypt/live/spmapi.com/fullchain.pem", __DIR__)
+# ],
+# server: true,
+# root: ".",
+# version: Application.spec(:spmapi, :vsn),
+# force_ssl: [hsts: true]
 
 # Do not print debug messages in production
 config :logger, level: :info
