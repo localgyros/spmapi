@@ -14,7 +14,7 @@ defmodule Spmapi.Application do
       supervisor(SpmapiWeb.Endpoint, []),
       # Start your own worker by calling: Spmapi.Worker.start_link(arg1, arg2, arg3)
       # worker(Spmapi.Worker, [arg1, arg2, arg3]),
-      worker(PidFile.Worker, [[file: "/run/spmapi.pid"]])
+      worker(PidFile.Worker, [[file: "/run/spmapi/spmapi.pid"]])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
