@@ -80,4 +80,4 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "/home/spmapi/spmapi_config/prod.secret.exs"
+import_config "/home/spmadmin/spmapi_config/prod.secret.exs"
